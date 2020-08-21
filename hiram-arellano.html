@@ -1,0 +1,49 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-input/paper-input.html">
+
+<dom-module id="hiram-arellano">
+    <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Práctica de importar dependencias</h2>
+    <paper-input id="usuario" label="Usuario" ></paper-input>
+    <paper-input id="password" type="password" label="Contraseña" ></paper-input>
+    <button on-click="entrar">Entrar</button>
+  </template>
+
+    <script>
+        /**
+         * `hiram-arellano`
+         * Es el primer componentes polymer del workshop
+         *
+         * @customElement
+         * @polymer
+         * @demo demo/index.html
+         */
+        class HiramArellano extends Polymer.Element {
+            static get is() {
+                return 'hiram-arellano';
+            }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'hiram-arellano'
+                    }
+                };
+            }
+            entrar() {
+                let usuario = this.$.usuario.value;
+                let contraseña = this.$.password.value;
+                console.log(`El usuario ${usuario} tiene la contraseña ${contraseña}`);
+            }
+        }
+
+
+
+        window.customElements.define(HiramArellano.is, HiramArellano);
+    </script>
+</dom-module>
