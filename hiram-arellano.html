@@ -9,7 +9,7 @@
         display: block;
       }
     </style>
-    <paper-card heading="{{inputValue}}">        
+    <paper-card heading="{{title}}">        
         <paper-input label="Input Label" value="{{inputValue}}"></paper-input>
     </paper-card>
     
@@ -36,7 +36,8 @@
                     },
                     inputValue: {
                         type: String,
-                        value: ''
+                        value: '',
+                        notify: true
                     }
                 };
             }
