@@ -1,20 +1,19 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-card/paper-card.html">
 
 <dom-module id="hiram-arellano">
     <template>
     <style>
       :host {
-        display: flex;
-        flex-direction: column;
-        
-  align-items: center;
+        display: block;
       }
     </style>
-    <h2>Práctica de importar dependencias</h2>
-    <paper-input id="usuario" label="Usuario" ></paper-input>
-    <paper-input id="password" type="password" label="Contraseña" ></paper-input>
-    <button on-click="entrar">Entrar</button>
+    <paper-card>
+        <h2>[[title]]</h2>
+        <paper-input label="Input Label" value="[[inputValue]]"></paper-input>
+    </paper-card>
+    
   </template>
 
     <script>
@@ -32,16 +31,15 @@
             }
             static get properties() {
                 return {
-                    prop1: {
+                    title: {
                         type: String,
-                        value: 'hiram-arellano'
+                        value: ''
+                    },
+                    inputValue: {
+                        type: String,
+                        value: ''
                     }
                 };
-            }
-            entrar() {
-                let usuario = this.$.usuario.value;
-                let contraseña = this.$.password.value;
-                console.log(`El usuario ${usuario} tiene la contraseña ${contraseña}`);
             }
         }
 
