@@ -1,6 +1,7 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../paper-input/paper-input.html">
 <link rel="import" href="../paper-card/paper-card.html">
+<link rel="import" href="../paper-button/paper-button.html">
 
 <dom-module id="hiram-arellano">
     <template>
@@ -11,6 +12,7 @@
     </style>
     <paper-card heading="{{title}}">        
         <paper-input label="Input Label" value="{{inputValue}}"></paper-input>
+        <paper-button>{{inputValue}}</paper-button>
     </paper-card>
     
   </template>
