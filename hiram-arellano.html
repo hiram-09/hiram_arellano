@@ -8,7 +8,22 @@
     <style>
       :host {
         display: block;
+        @apply --hiram-arellano
       }
+        paper-button{
+          --paper-button: {
+              border-radius: 3px;
+              background-color: orange;
+              padding: 10px 10px 10px 10px;
+              @apply --hiram-arellano-paper-button
+          }        
+        }
+        paper-card{
+            --paper-card: {
+                @apply --hiram-arellano-paper-card;
+            }
+        }
+
     </style>
     <paper-card heading="{{title}}">        
         <paper-input label="Input Label" value="{{inputValue}}"></paper-input>
